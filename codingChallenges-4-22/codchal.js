@@ -20,6 +20,22 @@ For example:
 
 
 console.log(maps([2,9,15]),[4,18,30]);
-console.log(maps([]),[]);
-console.log(maps([ 5, , 8, , 62]),[10,16,124]);
+
+
+//now to account for the edge cases
+
+function maps2(array) {
+    if((array == undefined) || (array.length === 0)) {
+        console.log('Please enter an array of integers');
+    } 
+    else { 
+        return array.map(element => element *=2);
+    }
+}
+
+
+console.log(maps2([4,18,30]), [8,36,60]);
+console.log(maps2([]),[]);
+console.log(maps2([ 5, , 8, , 62]),[10,16,124]);
+console.log(maps2([#]),[10,16,124]);
 
